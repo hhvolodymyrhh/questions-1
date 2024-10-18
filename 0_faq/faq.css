@@ -1,0 +1,186 @@
+/*_________________ Загальні стилі */
+.faq-title {
+    font-family: "Impact", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* свг стрілки */
+.accordion-arrow {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 24px;
+    top: 28px;
+    stroke: black !important;
+    fill: none !important;
+    z-index: 2;
+}
+
+.dark-theme .accordion-arrow {
+    stroke: #f1f1f1;
+}
+
+/* поворот стрілки донизу */
+.accordion-container>.is-active .accordion-arrow {
+    transform: rotate(180deg);
+}
+
+.ac {
+    border: none !important;
+    border-bottom: 2px solid #e4e5e6 !important;
+}
+
+.ac.is-active {
+    background-color: #bcdfd1;
+    border-radius: 16px;
+    border-bottom: none !important;
+}
+
+.dark-theme .ac {
+    background-color: inherit !important;
+    border-bottom: 2px solid #f0f0f0 !important;
+}
+
+.dark-theme .ac.is-active {
+    border-bottom: none !important;
+}
+
+.ac .ac-trigger {
+    color: var(--text-color) !important;
+    font-family: "Poppins", sans-serif !important;
+    text-transform: uppercase;
+}
+
+.ac .ac-trigger::after {
+    display: none;
+}
+
+.ac-text {
+    color: var(--text-color) !important;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 300 !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0.03em !important;
+}
+
+.dark-theme .ac.is-active {
+    background: #204136 !important;
+}
+
+/*---------------------- MOBIL */
+@media screen and (min-width: 320px) {
+    .faq-container {
+        margin-bottom: 80px;
+    }
+
+    .faq-title {
+        font-size: 52px;
+        line-height: 1.23;
+        letter-spacing: 0.03em;
+    }
+
+    .asked-span {
+        display: block;
+    }
+
+    .faq-title-container {
+        margin-bottom: 40px;
+    }
+
+    .faq-decor {
+        display: none;
+    }
+
+    .ac .ac-trigger {
+        padding: 28px 72px 28px 24px !important;
+        font-weight: 400 !important;
+        font-size: 18px !important;
+        line-height: 1.56 !important;
+        letter-spacing: 0.03em !important;
+    }
+
+    .accordion-container>.is-active .ac-trigger {
+        padding-bottom: 24px !important;
+    }
+
+    .ac .ac-panel .ac-text {
+        padding: 0px 24px 28px 24px !important;
+    }
+}
+
+/* -------------------------------------Styles for Tablet devices (min-width: 768px) */
+@media screen and (min-width: 768px) {
+
+    .faq-container {
+        margin-bottom: 124px;
+    }
+
+    .faq-title-container {
+        margin-bottom: 60px;
+    }
+
+    .faq-title {
+        font-size: 108px;
+        line-height: 1.15;
+        letter-spacing: 0.02em;
+    }
+
+    .ac .ac-trigger {
+        padding: 28px 80px 28px 24px !important;
+        font-size: 20px !important;
+        line-height: 1.6 !important;
+        letter-spacing: 0.03em !important;
+    }
+
+    .ac .ac-panel .ac-text {
+        padding: 0px 24px 28px 24px !important;
+    }
+}
+
+/* ---------------------------------Styles for Desktop devices */
+@media screen and (min-width: 1280px) {
+    .faq-container {
+        margin-bottom: 164px;
+        display: flex;
+        gap: 104px;
+    }
+
+    .faq-title {
+        font-size: 108px;
+        line-height: 1.15;
+        letter-spacing: 0.02em;
+        margin-bottom: 240px;
+    }
+
+    .asked-span {
+        display: block;
+    }
+
+    .faq-title-container {
+        margin-bottom: 40px;
+    }
+
+    .faq-decor {
+        display: block;
+        width: 526px;
+        height: 408px;
+    }
+
+    .ac .ac-trigger {
+        padding: 28px 80px 28px 24px !important;
+        font-weight: 400 !important;
+        font-size: 18px !important;
+        line-height: 1.56 !important;
+        letter-spacing: 0.03em !important;
+    }
+
+    .question-container {
+        display: flex;
+    }
+
+    .accordion-container {
+        align-self: flex-end;
+    }
+}
